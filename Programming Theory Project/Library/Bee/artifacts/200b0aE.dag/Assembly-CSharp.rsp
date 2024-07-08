@@ -356,7 +356,7 @@
 "Assets/Scripts/Cube.cs"
 "Assets/Scripts/Cylinder.cs"
 "Assets/Scripts/IClickable.cs"
-"Assets/Scripts/MouseClickDetector.cs"
+"Assets/Scripts/InputDetector.cs"
 "Assets/Scripts/Shape.cs"
 "Assets/Scripts/Sphere.cs"
 -langversion:9.0
