@@ -1,23 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
-public class MouseClickDetector : MonoBehaviour
+public class InputDetector : MonoBehaviour
 {
     [SerializeField] Camera mainCamera;
+    Scene currentScene;
 
     void Start()
     {
-        
+        currentScene = SceneManager.GetActiveScene();
     }
 
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
+            if (currentScene.buildIndex == 0) {
+                SceneManager.LoadScene(1);
+            }
             DetectClickableObject();
-        }        
+        }
+
+        if (Input.anyKeyDown && currentScene.buildIndex == 0)
+        {
+            SceneManager.LoadScene(1);
+        }
     }
 
     void DetectClickableObject()
